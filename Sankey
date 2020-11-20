@@ -1,0 +1,39 @@
+Highcharts.chart("container", {
+  title: {
+    text: "Abortion vs. Continued Pregnancy Sankey Diagram"
+  },
+  accessibility: {
+    point: {
+      valueDescriptionFormat:
+        "{index}. {point.from} to {point.to}, {point.weight}."
+    }
+  },
+  series: [
+    {
+      keys: ["from", "to", "weight"],
+      data: [
+        ["AB Visit", "(SAB)", 16],
+        ["AB Visit", "(MAB)", 22],
+        ["(SAB)", "Termination", 13],
+        ["(SAB)", "Still Pregnant at End of Visit", 3],
+        ["Termination", "Abortion", 13],
+        ["Still Pregnant at End of Visit", "Keeps Pregnancy", 3],
+        ["Keeps Pregnancy", "Full term pregnancy", 2],
+        ["Keeps Pregnancy", "Comes back for 2nd AB", 1],
+        ["Comes back for 2nd AB", "Aborts", 1],
+        ["Comes back for 2nd AB", "Full Term Pregnancy", 1],
+        ["(MAB)", "Termination", 16],
+        ["(MAB)", "Still Pregnant at End of Visit", 6],
+        ["Termination", "Abortion", 16],
+        ["Still Pregnant at End of Visit", "Keeps Pregnancy", 6],
+        ["Keeps Pregnancy", "Full term pregnancy", 4],
+        ["Keeps Pregnancy", "Comes back for 2nd AB", 2],
+        ["Comes back for 2nd AB", "Aborts", 1],
+        ["Comes back for 2nd AB", "Full Term Pregnancy", 1]
+      ],
+      type: "sankey",
+      name:
+        "Diagram of patients that continue pregnancy vs. pations that shose to abort"
+    }
+  ]
+});
